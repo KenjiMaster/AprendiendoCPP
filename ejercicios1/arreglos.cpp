@@ -1,8 +1,7 @@
 #include<iostream>
-#include<sstream>
-#include<vector>
-#include<algorithm>
-#include<utility>
+#include<sstream> // usar sstream
+#include<vector> // usar vectores
+#include<utility> //usar pair
 
 using namespace std;
 vector<string> split(const string& entrada, char delimitador){
@@ -27,10 +26,10 @@ pair<vector<int>,int> depresiones(const vector<int>& datos){
 }
 
 int main(){
-    string saludo;
-    cout << "Ingresa lo que sea: ";
-    getline(cin,saludo);
-    vector<string> lista = split(saludo,',');
+    string datos;
+    cout << "Ingresa los datos: ";
+    getline(cin,datos);
+    vector<string> lista = split(datos,',');
     vector<int> enteros;
     for (string item : lista){
         enteros.push_back(stoi(item));
